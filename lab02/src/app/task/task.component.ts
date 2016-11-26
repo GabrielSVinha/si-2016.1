@@ -8,17 +8,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class TaskComponent{
 
-  private _name: string;
-  private created_at: string;
+  public _name: string;
+  private created_at: number;
 
-  constructor() { 
+  constructor(name: string) { 
+	this._name = name;
+  	this.created_at = Date.now();
   }
 
-  getName():string{
-    return this._name;
-  }
-
-  getDate():string{
+  getDate():number{
     return this.created_at;
   }
 }

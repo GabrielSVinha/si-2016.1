@@ -1,0 +1,73 @@
+div.mock table p{
+	font-size: 120%;
+	font-style: bold;
+}
+div.mock table{ 
+	position: relative;
+	width: 100%;
+	border: 0.5px solid black;
+	background-color: #CFD8DC;
+	font-family: Helvetica, Serif;
+	margin-left: .12em;
+	margin-right: .8em;
+	top: -4px;
+}
+div.mock input{
+	position: relative;
+	text-align: center;
+}
+div.mock table tr th button{
+	background-color: black;
+	color: white;
+	padding: 10px 27px;
+	text-align: center;
+	transition: all 0.5s;
+	cursor: pointer
+}
+div.mock table tr th button span{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+div.mock table tr th button span:after{
+	content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+div.mock table tr th button:hover span{
+	 padding-right: 25px;
+}
+div.mock table tr th button:hover span:after{
+	 opacity: 1;
+  right: 0
+}
+div.options {
+	display: inline;
+	text-align: center;
+}
+div.options button{
+    background-color: #e7e7e7; 
+    color: black; 
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 2px solid #555555;
+}
+div.complete button{
+	background-color: #e7e7e7;
+	color: black;
+	border: none;
+	padding: 14px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	border: 2.5px solid #555555;
+}

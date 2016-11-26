@@ -1,0 +1,26 @@
+<div class="mock" *ngFor="let task of tasks">
+	<table>
+		<tr>
+			<th>
+				<p>{{task._name}}</p>
+				<a>Edit task name</a><br>
+				<input [(ngModel)]="task._name" placeholder="task._name"><br>
+				<a>{{task.getDate()}}</a>
+				<br><br><br>
+			</th>
+			<th>
+				<button (click)="completeTask()"><span>Task completed!</span></button>
+			</th>
+		</tr>
+	</table>
+</div>
+<div class="complete">
+	<button>
+		Add New Task!<br>
+		<input #box (keyup.enter)="addTask(box.value)" placeholder="Name Of The Task" required>
+	</button><br><br>
+</div>
+<div class="options">
+	<button (click)="homePage()">Back</button>
+	<button (click)="showCompleted()">Show Completed Tasks</button>
+</div>
