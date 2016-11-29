@@ -5,13 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
-import { ControllerComponent } from './controller/controller.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
-    ControllerComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
