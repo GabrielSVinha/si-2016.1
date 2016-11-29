@@ -71,3 +71,14 @@ div.complete button{
 	font-size: 20px;
 	border: 2.5px solid #555555;
 }
+
+div.completed table{
+	position: relative;
+	width: 100%;
+	border: 0.2px solid black;
+	font-family: Helvetica, Serif;
+	margin-right: .12em;
+	margin-left: .8em;
+	background-color: red;
+	color: white;
+}

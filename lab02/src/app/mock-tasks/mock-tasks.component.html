@@ -5,11 +5,11 @@
 				<p>{{task._name}}</p>
 				<a>Edit task name</a><br>
 				<input [(ngModel)]="task._name" placeholder="task._name"><br>
-				<a>{{task.getDate()}}</a>
+				<a>{{task.getDate() | date}}</a>
 				<br><br><br>
 			</th>
 			<th>
-				<button (click)="completeTask()"><span>Task completed!</span></button>
+				<button (click)="completeTask(task)"><span>Task completed!</span></button>
 			</th>
 		</tr>
 	</table>
@@ -21,6 +21,24 @@
 	</button><br><br>
 </div>
 <div class="options">
-	<button (click)="homePage()">Back</button>
-	<button (click)="showCompleted()">Show Completed Tasks</button>
+	 <button (click)="homePage()" *ngIf="!show">Back</button>
+	<button (click)="showCompleted()" *ngIf="!show">Show Completed Tasks</button>
+</div>
+
+<div class="completed" *ngIf="show">
+	<div *ngFor="let _task of completed">
+		<table>
+			<tr>
+				<th>
+					<p>{{_task._name}}</p>
+					<a>{{_task.getDate()}}</a>
+					<br><br><br>
+				</th>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="options">
+	<button (click)="homePage()" *ngIf="show">Back</button>
+	<button (click)="hideCompleted()" *ngIf="show">Hide Completed Tasks</button>
 </div>

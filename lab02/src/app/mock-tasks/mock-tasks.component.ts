@@ -12,7 +12,8 @@ import { CompletedComponent } from '../completed/completed.component.ts'
 export class MockTasksComponent{
 
   private tasks = [new TaskComponent("Dormir"), new TaskComponent("Comer"), new TaskComponent("Codar")];
-
+  private completed = [];
+  private show = false;
   constructor(private _router:Router) { }
 
   homePage(){
@@ -20,8 +21,14 @@ export class MockTasksComponent{
   }
 
   showCompleted(){
+  	this.show = true;
   }
-  completeTask(){
+  hideCompleted(){
+	this.show = false;
+  }
+  completeTask(task: TaskComponent){
+	this.tasks.splice(this.tasks.indexOf(task), 1);
+  	this.completed.push(task);
   }
   addTask(name: string){
 	this.tasks.push(new TaskComponent(name));
