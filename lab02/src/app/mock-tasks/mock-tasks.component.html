@@ -22,7 +22,7 @@
 </div>
 <div class="options">
 	 <button (click)="homePage()" *ngIf="!show">Back</button>
-	 <button (click)="showCompleted()" *ngIf="!show">Show Completed Tasks  {{getPercentage()}}%</button>
+	 <button (click)="showCompleted()" *ngIf="!show">Show Completed Tasks  {{getPercentage() | number : '1.2-2'}}%</button>
 </div>
 
 <div class="completed" *ngIf="show">
@@ -31,7 +31,7 @@
 			<tr>
 				<th>
 					<p>{{_task._name}}</p>
-					<a>{{_task.getDate()}}</a>
+					<a>{{_task.getDate() | date}}</a>
 					<br><br><br>
 				</th>
 			</tr>
@@ -40,5 +40,5 @@
 </div>
 <div class="options">
 	<button (click)="homePage()" *ngIf="show">Back</button>
-	<button (click)="hideCompleted()" *ngIf="show">Hide Completed Tasks  {{getPercentage()}}%</button>
+	<button (click)="hideCompleted()" *ngIf="show">Hide Completed Tasks  {{getPercentage() | number : '1.2-2'}}%</button>
 </div>

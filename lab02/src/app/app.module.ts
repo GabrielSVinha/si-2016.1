@@ -4,20 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routes } from './config/app.routes';
 import { AppComponent } from './app.component';
-import { TaskComponent } from './task/task.component';
-import { MenuComponent } from './menu/menu.component';
+import { Task } from './task/task';
 import { MockTasksComponent } from './mock-tasks/mock-tasks.component';
 import { RouterModule, Routes } from '@angular/router';
-import { CompletedComponent } from './completed/completed.component';
-
+import { MenuComponent } from './menu/menu.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent,
     MenuComponent,
     MockTasksComponent,
-    CompletedComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,

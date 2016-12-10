@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import{ TaskComponent } from '../task/task.component';
+import { Task } from '../task/task';
 import { Router } from '@angular/router';
-import { CompletedComponent } from '../completed/completed.component.ts'
 
 @Component({
   selector: 'app-mock-tasks',
@@ -11,9 +10,10 @@ import { CompletedComponent } from '../completed/completed.component.ts'
 
 export class MockTasksComponent{
 
-  private tasks = [new TaskComponent("Dormir"), new TaskComponent("Comer"), new TaskComponent("Codar")];
+  private tasks = [new Task("Dormir"), new Task("Comer"), new Task("Codar")];
   private completed = [];
   private show = false;
+
   constructor(private _router:Router) { }
 
   homePage(){
@@ -23,18 +23,21 @@ export class MockTasksComponent{
   showCompleted(){
   	this.show = true;
   }
+
   hideCompleted(){
 	this.show = false;
   }
-  completeTask(task: TaskComponent){
+
+  completeTask(task: Task){
 	this.tasks.splice(this.tasks.indexOf(task), 1);
-  	this.completed.push(task);
+	this.completed.push(task);
   }
+
   addTask(name: string){
-	this.tasks.push(new TaskComponent(name));
-	}
+  	this.tasks.push(new Task(name
+  }
 
   getPercentage(){
-  return (100*this.completed.length) / (this.tasks.length + this.completed.length)
+  	return (100*this.completed.length) / (this.tasks.length + this.completed.length)	   
   }
 }

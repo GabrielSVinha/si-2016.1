@@ -6,12 +6,9 @@ import { Router } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent{
 
   constructor(private _router:Router) { }
-
-  ngOnInit() {
-  }
 
   showList(): void{
     this._router.navigateByUrl('/tasks');
