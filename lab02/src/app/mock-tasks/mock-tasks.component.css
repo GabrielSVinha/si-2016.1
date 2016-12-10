@@ -59,6 +59,7 @@ div.options button{
     display: inline-block;
     font-size: 16px;
     border: 2px solid #555555;
+    top: 100px;
 }
 div.complete button{
 	background-color: #e7e7e7;

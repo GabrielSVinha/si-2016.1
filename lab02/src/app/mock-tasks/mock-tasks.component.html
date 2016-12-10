@@ -22,7 +22,7 @@
 </div>
 <div class="options">
 	 <button (click)="homePage()" *ngIf="!show">Back</button>
-	<button (click)="showCompleted()" *ngIf="!show">Show Completed Tasks</button>
+	 <button (click)="showCompleted()" *ngIf="!show">Show Completed Tasks  {{getPercentage()}}%</button>
 </div>
 
 <div class="completed" *ngIf="show">
@@ -40,5 +40,5 @@
 </div>
 <div class="options">
 	<button (click)="homePage()" *ngIf="show">Back</button>
-	<button (click)="hideCompleted()" *ngIf="show">Hide Completed Tasks</button>
+	<button (click)="hideCompleted()" *ngIf="show">Hide Completed Tasks  {{getPercentage()}}%</button>
 </div>

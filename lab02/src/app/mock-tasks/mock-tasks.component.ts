@@ -32,5 +32,9 @@ export class MockTasksComponent{
   }
   addTask(name: string){
 	this.tasks.push(new TaskComponent(name));
+	}
+
+  getPercentage(){
+  return (100*this.completed.length) / (this.tasks.length + this.completed.length)
   }
 }
